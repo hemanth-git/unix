@@ -1,0 +1,119 @@
+
+clear/cntl+l --- to clear screen
+
+
+uname-OS information(syntax uname -s-v-r-p-o)
+
+s-kernel name
+v- kernel version
+p-processor type
+o-Operating system
+n- network node/host name
+--- Print or change Terminal characteristics
+stty -a( all terminal keys like terminate,erase,save etc)
+a-print current settings in human readable form
+
+--show  who is logged in
+
+who -Hmab()
+
+u-list users logged in
+H-print line of column heading
+m-only host name and user
+a- all details
+b-last boot time
+
+date +%a-z
+
+to print a date with space
+date + '%A %B  %T %Y'
+
+
+to print the calander
+cal
+cal 2014--print complete year cal
+cal 4 2014
+cal 9 1752--year conversion
+
+pwd-present working directory
+
+mkdir -options dirname
+mkdir -v indhu(will give confirmation as directory created)
+mkdir -p dir1/dir2/dir3(will create new directory and sub directory)
+mkdir -m 777 dirname
+
+cat (concatenate,Standard i/o)
+cat >f1(to create file)
+Ctl+c-exit without saving current line
+ctlr+d save and exit
+cat >f1
+writes output to file f1
+cat >> f1 append to file
+
+cat <f1
+
+read input from file and write to terminal 
+
+cat f1 f2
+read input from multiple file and redirect to standard output
+-n-shows line number for all lines
+-b-removes blank lines and show number for remaining lines
+-e end of file($)
+touch filename(To create empty file and if file exists updates the time keeing data as such)
+
+
+ls(List out all files and dirs from PWD)
+ls-a (show all including hidden files)
+hidden file-file starting with .
+ls-A(show all files except current and parent directory)
+ls-c(sort and list files according to modified time)
+ls -F(shows with formats)
+/ - dir
+* - exe file
+@ - linked files
+| - piped files
+= - socket files
+ls -l(long list)
+ls -n(shows number for user and group instead of name)
+ls -g(long list but removes the user name)
+ls -m(similar to ls but , is used to seperate files)
+ls -R(Recursive ie it shows sub directories and files with in it)
+ls -r(list the files in reverse order)
+ls -d(display info about current directory details)
+ls -1(display page wise)
+ls -i(identification node)
+ls -h(human readable format)
+wc(count number lines,words and characters in a file)
+cp src des(file -file,file-dir,dir-dir)
+-n not to overwrite
+-i confirmation before overwriting
+--backup (to take backup if both source and destination files are in same name)
+create hardlink instead of copying the file
+ls -l cp dir1\f1.txt dir2\f1.txt
+preserve attributes of file
+cp -p fil1 fil2
+
+mv oldfilename newfilename(rename old with new file)
+mv filename dirname(move file to dir)
+mv olddir newdir(rename dir)
+
+rmdir dirname(to remove empty dir) 
+rmdir -p dirname(to removethe structure with path)
+
+rm filename -i(confirms the user)
+-r/R(remove structure without path)
+
+link(linking the files)
+hardlink(inode will be same for both files)
+ln file1 file2
+softlink(inode will be different and linked file will be differentiated)
+ln -s file1 file2
+
+grep "pattern" filename -n/-v/-i/-c
+egrep(used to search more than 1 string)
+fgrep(used to search exact string)
+
+chmod -c user+rwx,g+x dir/file(persmissions are granted for user and group and -c displays new changes in persmissions)
+chmod 777 dir/file
+Note: umount will have 0022which will be subracted from 666(file) and  777(dir) while creating file and dir
+7-rwx,4-read,2-write,1-execute
